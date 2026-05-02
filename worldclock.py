@@ -4,7 +4,7 @@ import time
 import os
 
 def show_time(city, timezone):
-	currenttime = datetime.now(ZoneInfo(timezone))
+	current_time = datetime.now(ZoneInfo(timezone))
 	print(city + ": " + time.strftime("%A, %B %d %I:%M %p %Z"))
 
 
@@ -25,8 +25,9 @@ cities = [
 ]
 
 while True:
+	os.system("clear")
 	for city in cities:
 		show_time(city["name"], city["timezone"])
 	time.sleep(60)
-	os.system("clear")
+	
 	
