@@ -11,6 +11,12 @@ def show_time(city, timezone):
 
 
 
+def local(city, timezone):
+	local_time = localtime(ZoneInfo(timezone))
+	print(time.strftime("%I:%M %p %Z"))
+
+
+
 cities = [
 	{"name": "New York", "timezone": "America/New_York"},
 	{"name": "London", "timezone": "Europe/London"},
@@ -30,8 +36,6 @@ while True:
 	os.system("clear")
 	for city in cities:
 		show_time(city["name"], city["timezone"])
+	print("Last Updated: ", local) 
 	time.sleep(60)
-
-print("Last Updated: " + datetime.now(ZoneInfo(timezone)) 
-	
 	
