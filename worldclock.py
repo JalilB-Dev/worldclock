@@ -2,7 +2,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 import time
 import os
-import timeit
+
 
 
 def show_time(city, timezone):
@@ -31,6 +31,7 @@ while True:
 	for city in cities:
 		show_time(city["name"], city["timezone"])
 	time.sleep(60)
-	print("Last Updated: " + current_time) 
+
+print("Last Updated: " + datetime.now(ZoneInfo(timezone)) 
 	
 	
