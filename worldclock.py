@@ -7,13 +7,13 @@ import os
 
 def show_time(city, timezone):
 	current_time = datetime.now(ZoneInfo(timezone))
-	print(city + ": " + time.strftime("%A, %B %d %I:%M %p %Z"))
+	print(city + ": " + current_time.strftime("%A, %B %d %I:%M %p %Z"))
 
 
 
-def local(city, timezone):
-	local_time = localtime(ZoneInfo(timezone))
-	print(time.strftime("%I:%M %p %Z"))
+def show_local():
+	local_time = datetime.now()
+	print("Local: " + local_time.strftime("%I:%M %p"))
 
 
 
@@ -36,6 +36,6 @@ while True:
 	os.system("clear")
 	for city in cities:
 		show_time(city["name"], city["timezone"])
-	print("Last Updated: ", local) 
-	time.sleep(60)
-	
+	print("Last Updated: ", datetime.now().strftime("%I:%M %p")) 
+	time.time()
+
