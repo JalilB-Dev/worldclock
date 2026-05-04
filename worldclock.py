@@ -30,7 +30,7 @@ def show_time(city, timezone):
 
 def show_local():
 	local_time = datetime.now()
-	print("Local: " + local_time.strftime("%I:%M %p") + "at" + tod)
+	print("Local: " + local_time.strftime("%I:%M %p") + "at", tod)
 
 
 
