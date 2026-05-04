@@ -32,10 +32,18 @@ cities = [
 	{"name": "Moscow", "timezone": "Europe/Moscow"},
 ]
 
-while True:
-	os.system("clear")
-	for city in cities:
-		show_time(city["name"], city["timezone"])
-	print("Last Updated: ", datetime.now().strftime("%I:%M %p")) 
-	time.time()
 
+
+
+try:
+	while True:
+		os.system("clear")
+
+		for city in cities:
+			show_time(city["name"], city["timezone"])
+		
+		print("Last Updated: ", datetime.now().strftime("%I:%M %p")) 
+		interval = 60 - datetime.now().second 
+		time.sleep(interval)
+except KeyboardInterrupt:
+	pass
