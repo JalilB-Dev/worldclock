@@ -10,25 +10,24 @@ import os
 def tod():
 	time_of_day = datetime.now().hour
 	if 6 < time_of_day < 17:
-		print("Day")
+		return "Day"
 	
 	elif 18 < time_of_day < 20:
-		print("Evening")
+		return "Evening"
 	
 	elif 5 > time_of_day or time_of_day > 21:
-		print("Night")
+		return "Night"
 	
-	print(time_of_day)
+
 
 def show_time(city, timezone):
 	current_time = datetime.now(ZoneInfo(timezone))
 	print(city + ": " + current_time.strftime("%A, %B %d %I:%M %p %Z"))
 
 
-
 def show_local():
 	local_time = datetime.now()
-	print("Local: " + local_time.strftime("%I:%M %p"))
+	return "Local: " + local_time.strftime("%I:%M %p")
 
 
 
