@@ -5,14 +5,12 @@ import os
 
 
 
-
-
 def tod():
 	time_of_day = datetime.now().hour
-	if 6 < time_of_day < 17:
+	if 6 <= time_of_day <= 17:
 		return "Day"
 	
-	elif 18 < time_of_day < 20:
+	elif 18 <= time_of_day <= 20:
 		return "Evening"
 	
 	elif 5 > time_of_day or time_of_day > 21:
@@ -23,6 +21,7 @@ def tod():
 def show_time(city, timezone):
 	current_time = datetime.now(ZoneInfo(timezone))
 	print(city + ": " + current_time.strftime("%A, %B %d %I:%M %p %Z"))
+
 
 
 def show_local():
@@ -61,5 +60,8 @@ try:
 		print("Last Updated: ", datetime.now().strftime("%I:%M %p")) 
 		interval = 60 - datetime.now().second 
 		time.sleep(interval)
+
+
+
 except KeyboardInterrupt:
 	pass
