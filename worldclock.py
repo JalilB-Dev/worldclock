@@ -15,10 +15,10 @@ def tod():
 	elif 18 < time_of_day < 20:
 		print("Evening")
 	
-	elif 5 > time_of_day > 21:
+	elif 5 > time_of_day or time_of_day > 21:
 		print("Night")
 	
-
+	print(time_of_day)
 
 def show_time(city, timezone):
 	current_time = datetime.now(ZoneInfo(timezone))
