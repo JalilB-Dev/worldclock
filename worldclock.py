@@ -18,8 +18,6 @@ def tod():
 	elif 5 > time_of_day > 21:
 		print("Night")
 	
-	else:
-		print(time_of_day)
 
 
 def show_time(city, timezone):
