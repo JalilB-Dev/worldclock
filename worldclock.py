@@ -19,7 +19,7 @@ def tod():
 		print("Night")
 	
 	else:
-		print(tod())
+		print(time_of_day)
 
 
 def show_time(city, timezone):
