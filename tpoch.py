@@ -3,7 +3,7 @@ import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from terminal_tui import TerminalTUI
-from regions import regions
+from regions import cities
 
 
 def tod():
@@ -23,15 +23,12 @@ def show_local():
     return "Local: " + local_time.strftime("%I:%M %p")
 
 
-cities = regions()
-
-
 try:
     while True:
         os.system("clear")
         tui = TerminalTUI()
         tui.display_header()
-        tui.display_time(city["name"], city["timezone"])
+        tui.display_time(cities)
         print("Time of Day: ", tod())
         print(show_local())
         print("Last Updated: ", datetime.now().strftime("%I:%M %p"))
