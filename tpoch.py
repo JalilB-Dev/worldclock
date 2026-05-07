@@ -39,7 +39,7 @@ cities = [
     {"name": "Hong Kong", "timezone": "Asia/Hong_Kong"},
     {"name": "Kolkata", "timezone": "Asia/Kolkata"},
     {"name": "Sāo Paulo", "timezone": "America/Sao_Paulo"},
-    {"name": "Moscow", "timezone": "Europe/Moscow"},
+    {"name": "Moscow", "timezone": "Europe/Moscow"}
 ]
 
 
@@ -48,6 +48,7 @@ try:
         os.system("clear")
         tui = TerminalTUI()
         tui.display_header()
+        tui.display_time()
         print("Time of Day: ", tod())
         print(show_local())
         for city in cities:
